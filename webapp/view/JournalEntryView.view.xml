@@ -1,0 +1,83 @@
+<mvc:View controllerName="journalentryiflauncher.controller.JournalEntryView"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <Table noDataText="Drop column list items here and columns in the area above" id="table0">
+                <items>
+                    <ColumnListItem xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" type="Active" id="item1">
+                        <cells>
+                            <VBox width="100%" direction="Column" id="vbox0">
+                                <Text text="仕訳連携(給与)" id="text1"/>
+                            </VBox>
+                            <VBox width="100%" direction="Column" id="vbox1" alignItems="End">
+                                <Button xmlns="sap.m" text="IF実行" id="button1" type="Emphasized" press="call632" ariaHasPopup="Dialog"/>
+                            </VBox>
+                        </cells>
+                    </ColumnListItem>
+                    <ColumnListItem xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" type="Active" id="item2">
+                        <cells>
+                            <VBox width="100%" direction="Column" id="vbox3">
+                                <Text text="仕訳連携(所属部門別労務費)" id="text2"/>
+                            </VBox>
+                            <VBox width="100%" direction="Column" id="vbox4" alignItems="End">
+                                <Button xmlns="sap.m" text="IF実行" id="button2" type="Emphasized" press="call651"/>
+                            </VBox>
+                            </cells>
+                    </ColumnListItem>
+                    <ColumnListItem xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" type="Active" id="item3">
+                        <cells>
+                            <VBox width="100%" direction="Column" id="vbox5">
+                                <Text text="仕訳連携(事業所税控除)" id="text3"/>
+                            </VBox>
+                            <VBox width="100%" direction="Column" id="vbox6" alignItems="End">
+                                <Button xmlns="sap.m" text="IF実行" id="button3" type="Emphasized" press="call652"/>
+                            </VBox>
+                            </cells>
+                    </ColumnListItem>
+                    <ColumnListItem xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" type="Active" id="item4">
+                        <cells>
+                            <VBox width="100%" direction="Column" id="vbox7">
+                                <Text text="仕訳連携(出向負担金)" id="text4"/>
+                            </VBox>
+                            <VBox width="100%" direction="Column" id="vbox8" alignItems="End">
+                                <Button xmlns="sap.m" text="IF実行" id="button4" type="Emphasized" press="call653"/>
+                            </VBox>
+                            </cells>
+                    </ColumnListItem>
+                    <ColumnListItem xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" type="Active" id="item5">
+                        <cells>
+                            <VBox width="100%" direction="Column" id="vbox9">
+                                <Text text="仕訳連携(アルバイト等労務費)" id="text5"/>
+                            </VBox>
+                            <VBox width="100%" direction="Column" id="vbox10" alignItems="End">
+                                <Button xmlns="sap.m" text="IF実行" id="button5" type="Emphasized" press="call668"/>
+                            </VBox>
+                            </cells>
+                    </ColumnListItem>
+                </items>
+                <columns>
+                    <Column id="column1">
+                        <header>
+                            <Label text="IF名称" id="label4"/>
+                        </header>
+                    </Column>
+                    <Column id="column2">
+                    </Column>
+                </columns>
+            </Table>
+        </content>
+        <footer>
+            <OverflowToolbar class="sapContrast sapContrastPlus" width="100%" id="toolbar1">
+            <!-- <Button id="messagePopoverBtn"
+					visible="{=!!${message>/}.length}"
+					icon="{ path: '/', formatter: '.buttonIconFormatter' }"
+					type="{ path: '/', formatter: '.buttonTypeFormatter' }"
+					text= "{path: '/', formatter: '.highestSeverityMessages' }"
+					press=".handleMessagePopoverPress"
+					ariaHasPopup="Dialog"/> -->
+            <content/>
+            </OverflowToolbar>
+        </footer>
+    </Page>
+</mvc:View>
