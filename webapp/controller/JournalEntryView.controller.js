@@ -162,7 +162,7 @@ sap.ui.define([
                 Http.open("GET", url);
                 Http.send();
                 Http.onreadystatechange = function(){
-                    //
+                    //XHR通信完了後
                     if(Http.readyState == 4){
                         if(Http.status == 200){
                             console.log(Http.responseText);
@@ -172,7 +172,8 @@ sap.ui.define([
                             console.log(Http.responseText);
                             MessageBox.success("データ取得件数が0件です。正常終了しました。");
                             oTable.setBusy(false);
-                        } else if(Http.status == 504) {
+                        //タイムアウトエラー発生時
+                        } else if(Http.status == 0) {
                             console.log(Http.responseText);
                             MessageBox.warning("データ連携に時間がかかっています。連携完了後に受信するメールをご確認ください。※メール受信まで5～10分程度かかることがあるためご了承ください。");
                             oTable.setBusy(false);
